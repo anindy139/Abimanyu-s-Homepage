@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#98C0D9" />
+
+  <title>Abimanyu's Homepage</title>
+  
+  <!-- HTML -->
+
+<style>
+  body {
+    background-image: url("wallpaper.jpg");
+    background-size: 100%;
+  }
+  
+  h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  color: #98C0D9;
+  font-size: 60px;
+  }
+  
+  
+</style>
+
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date();
+var h=today.getHours();
+var m=today.getMinutes();
+var s=today.getSeconds();
+// add a zero in front of numbers<10
+m=checkTime(m);
+s=checkTime(s);
+document.getElementById('txt').innerHTML=h+":"+m+":"+s;
+t=setTimeout('startTime()',500);
+}
+function checkTime(i)
+{
+if (i<10)
+{
+i="0" + i;
+}
+return i;
+}
+</script>
+
+</head>
+
+<body onload="startTime()">
+  <h1 id="txt"></h1>
+  
+  
+  <!-- Project -->
+</body>
+</html>
